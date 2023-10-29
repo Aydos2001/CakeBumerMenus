@@ -59,7 +59,7 @@ const CreateMenus = () => {
     }
   };
 
-  const id = state.selectCategory? state.selectCategory.id : state.categories[0]?.lists>0 ? state.categories[0]?.lists[0]?.id : state.categories[0]?.id
+  const id = state.selectCategory? state.selectCategory.id : state.categories[0]?.lists.length>0 ? state.categories[0]?.lists[0]?.id : state.categories[0]?.id
   const categories = state.selectCategory? state.selectCategory.category_id? "subcategories" : "categories" : state.categories[0]?.lists.length>0? "subcategories" : "categories"
   const apiUrl = `https://api.cake-bumer.uz/api/${categories}/${id}/menus`;
   
@@ -137,7 +137,7 @@ const CreateMenus = () => {
         <Box>
           <Flex gap={"5px"} >
             <Text  fontSize={"18px"} fontWeight={"600"}>Create</Text>
-            <Text fontSize={"18px"} fontWeight={"600"} color={dividerBg}>{state.selectCategory ? state.selectCategory.name_ru : state.categories[0]?.lists > 0 ? state.categories[0]?.lists[0].name_ru : state.categories[0]?.name_ru}</Text>
+            <Text fontSize={"18px"} fontWeight={"600"} color={dividerBg}>{state.selectCategory ? state.selectCategory.name_ru : state.categories[0]?.lists.length > 0 ? state.categories[0]?.lists[0].name_ru : state.categories[0]?.name_ru}</Text>
             <Text  fontSize={"18px"} fontWeight={"600"}>menu</Text>
           </Flex>
           {menuData.image ? (

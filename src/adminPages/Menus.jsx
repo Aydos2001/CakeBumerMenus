@@ -106,7 +106,7 @@ function Menus() {
         <Box>
           <Flex gap={"5px"} mb={"10px"}>
             <Text fontSize={"18px"} fontWeight={"600"}>All</Text>
-            <Text fontSize={"18px"} fontWeight={"600"} color={dividerBg}>{state.selectCategory ? state.selectCategory.name_ru : state.categories[0]?.lists > 0 ? state.categories[0]?.lists[0].name_ru : state.categories[0]?.name_ru}</Text>
+            <Text fontSize={"18px"} fontWeight={"600"} color={dividerBg}>{state.selectCategory ? state.selectCategory.name_ru : state.categories[0]?.lists.length > 0 ? state.categories[0]?.lists[0].name_ru : state.categories[0]?.name_ru}</Text>
             <Text fontSize={"18px"} fontWeight={"600"}>menu</Text>
           </Flex>
           {loading? (
