@@ -12,7 +12,7 @@ const CategoryItem = ({item}) => {
     <Box bg={categoryBg} onClick={() => (dispatch(selectCategory(item)), dispatch(productDetailsShow("")))} scrollSnapAlign={"start"} cursor={'pointer'}  border={"1px"} borderColor={categoryBorder} shadow={"sm"} transition={"ease-in-out .1s"} rounded={"sm"} _active={{transform : "scale(0.95)"}} minW={"full"} p={"1px"} pr={"20px"}>
       <Flex justifyContent={"start"} alignItems={"center"} minH={"30px"} minW={"full"} gap={"6px"}>
         <Image maxH={"35px"} minH={"35px"} maxW={"45px"} minW={"45px"} border={"2px"} borderColor={categoryBg} rounded={"sm"} src={`https://api.cake-bumer.uz/storage/${item.image_name}`}/>
-        <Text fontWeight={"600"} minW={"max-content"}>{state.lang? item.name_ru.length>10? `${item.name_ru.slice(0,9)}... ` : item.name_ru : item.name_eng.length>10? `${item.name_eng.slice(0,9)}... ` : item.name_eng}</Text>
+        <Text fontWeight={"600"} minW={"max-content"}>{state.lang? item.name_ru.length>8? `${item.name_ru.slice(0,7)}... ` : item.name_ru : item.name_eng.length>8? `${item.name_eng.slice(0,7)}... ` : item.name_eng}</Text>
       </Flex>
     </Box>
   )

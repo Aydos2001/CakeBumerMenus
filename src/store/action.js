@@ -28,9 +28,23 @@ export const selectCategory = (payload) => {
     }
 }
 
+export const selectCategorySub = (payload) => {
+    return {
+        type : reduserTypes.setSelectCategorySub,
+        payload : payload
+    }
+}
+
 export const getSelectMenus = (payload) => {
     return {
         type : reduserTypes.getSelectMenus,
+        payload : payload
+    }
+}
+
+export const getSelectSubcategories = (payload) => {
+    return {
+        type : reduserTypes.getSelectSubcategories,
         payload : payload
     }
 }
@@ -67,5 +81,11 @@ export const setMenuProducts = (payload) => {
     return {
         type : reduserTypes.setMenuProducts,
         payload : payload
+    }
+}
+
+export const toggleSidebar = () => {
+    return {
+        type: reduserTypes.toogleSidebar
     }
 }

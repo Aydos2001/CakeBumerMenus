@@ -5,15 +5,18 @@ export const initialState = {
     sidebarMenues: false,
     categories: categories,
     products: products,
+    subcategories: [],
     allImages: null,
     isLoading: true,
     selectCategory: null,
+    selectCategorySub: null,
     selectCategoryName: "MENUS",
     lang: true,
     productDetails: null,
     productDetailsShow: false,
     selectAllMenu: [],
-    menuProducts: null
+    menuProducts: null,
+    openSidebar: true,
 }
 
 export const reduserTypes = {
@@ -21,12 +24,15 @@ export const reduserTypes = {
     getAllCategories: "GET_ALL_CATEGORIES",
     setIsLoading: "SET_IS_LOADING",
     setSelectCategory: "SET_SELECT_CATEGORY",
+    setSelectCategorySub: "SET_SELECT_CATEGORY_SUB",
     getSelectMenus: "GET_SELECT_MENUS",
+    getSelectSubcategories: "GET_SELECT_SUBCATEGORIES",
     setLangSite: "SET_LANG_SITE",
     productDetailsShow: "PRODUCT_DETAILS_SHOW",
     setSelectMenu: "SET_SELECT_MENU",
     deleteSelectMenu: "DELETE_SELECT_MENU",
-    setMenuProducts: "SET_MENU_PRODUCTS"
+    setMenuProducts: "SET_MENU_PRODUCTS",
+    toogleSidebar: "TOOGLE_SIDEBAR",
 }
 
 export const reduser = (state, action) => {
@@ -52,12 +58,21 @@ export const reduser = (state, action) => {
             return {
                 ...state,
                 selectCategory: action.payload
-
+            };
+        case (reduserTypes.setSelectCategorySub):
+            return {
+                ...state,
+                selectCategorySub: action.payload
             };
         case (reduserTypes.getSelectMenus):
             return {
                 ...state,
                 products: action.payload
+            };
+        case (reduserTypes.getSelectSubcategories):
+            return {
+                ...state,
+                subcategories: action.payload
             };
         case (reduserTypes.setLangSite):
             return {
@@ -67,7 +82,7 @@ export const reduser = (state, action) => {
         case (reduserTypes.productDetailsShow):
             return {
                 ...state,
-                productDetailsShow: action.payload? true : false,
+                productDetailsShow: action.payload ? true : false,
                 productDetails: action.payload
             };
         case (reduserTypes.setSelectMenu):
@@ -87,7 +102,12 @@ export const reduser = (state, action) => {
         case (reduserTypes.setMenuProducts):
             return {
                 ...state,
-                menuProducts : action.payload
+                menuProducts: action.payload
+            };
+        case (reduserTypes.toogleSidebar):
+            return {
+                ...state,
+                openSidebar: !state.openSidebar
             };
     }
 }

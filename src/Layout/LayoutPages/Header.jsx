@@ -1,6 +1,6 @@
+import { BsMoonStars } from "react-icons/bs"; 
 import { MdSunny } from "react-icons/md"; 
 import { IoMdClose } from "react-icons/io";
-import { BsFillMoonStarsFill } from "react-icons/bs";
 import { AiOutlineBars } from "react-icons/ai";
 import { Box, Button, Flex, Icon, Text, useColorMode, useColorModeValue } from '@chakra-ui/react'
 import React, { useContext } from 'react'
@@ -24,7 +24,7 @@ const Header = () => {
                     <Icon as={state.sidebarMenues ? IoMdClose : AiOutlineBars} />
                 </Button>
                 <Button onClick={toggleColorMode} variant={"outline"} color={iconColor} size={"sm"} rounded={"full"} minH={"40px"} maxH={"40px"} minW={"40px"} p={"10px"} fontWeight={"600"}>
-                    <Icon fontSize={"20px"} as={colorMode === "light" ? BsFillMoonStarsFill : MdSunny} />
+                    <Icon fontSize={"18px"} as={colorMode === "light" ? BsMoonStars : MdSunny} />
                 </Button>
             </Flex>
         </Box>

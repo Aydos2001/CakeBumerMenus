@@ -13,7 +13,7 @@ const Products = () => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
 
-  const fetchDataId = state.selectCategory ? state.selectCategory.id : state.categories[0].lists.length > 0 ? state.categories[0].lists[0].id : state.categories[0].id;
+  const fetchDataId = state.selectCategory ? state.selectCategory.id : state.categories[0]?.lists.length > 0 ? state.categories[0].lists[0].id : state.categories[0]?.id;
 
   const scrollToTop = () => {
     const boxElement = document.getElementById("productsBox"); // Box elementining ID-si
@@ -43,8 +43,10 @@ const Products = () => {
       const response = await axios.get(getRequest);
       const data = response.data;
       dispatch(getSelectMenus(data.data));
+      
     } catch (err) {
       setError(err);
+      dispatch(getSelectMenus([]))
     } finally {
       setLoading(false);
     }
@@ -53,9 +55,9 @@ const Products = () => {
   const nameCategory = state.lang
     ? state.selectCategory
       ? state.selectCategory.name_ru
-      : state.categories[0].lists.length > 0
+      : state.categories[0]?.lists.length > 0
       ? state.categories[0].lists[0].name_ru
-      : state.categories[0].name_ru
+      : state.categories[0]?.name_ru
     : state.selectCategory
     ? state.selectCategory.name_eng
     : state.categories[0].lists.length > 0
