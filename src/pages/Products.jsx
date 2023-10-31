@@ -67,10 +67,8 @@ const Products = () => {
   return (
     <Box
       id="productsBox" // ID ni belgilash
-      borderColor={borderColor}
-      bg={useColorModeValue("white", "gray.700")}
-      rounded={"md"}
-      p={"5px"}
+      px={"10px"}
+      py={"5px"}
       overflowY={"auto"}
       w={"full"}
     >
@@ -92,7 +90,7 @@ const Products = () => {
             ))}
           </Grid>
           <Box display={state.productDetailsShow ? "block" : "none"}>
-            <ProductDetails />
+            <ProductDetails state={state} dispatch={dispatch}/>
           </Box>
         </>
       )}

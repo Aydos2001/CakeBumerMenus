@@ -41,18 +41,18 @@ const ProductItem = ({ item }) => {
   }
 
   return (
-    <Card rounded={"md"}  h={"full"}  bg={CardBg} shadow={"lg"} overflow={"hidden"} w={"full"}>
-      <CardBody p={"1px"} >
+    <Card rounded={"sm"}  h={"full"}  bg={CardBg} shadow={"lg"} overflow={"hidden"} w={"full"}>
+      <CardBody p={"0px"} >
       
-        <Image src={`https://api.cake-bumer.uz/storage/${item.image}`} backdropBrightness={"50"} alt="1" w={"full"} minH={"160px"} maxH={"160px"} bg={"white"} objectFit={"cover"} rounded={"md"} />
-        <Box border={"1px"} borderColor={CardBorder} position={"absolute"} display={"flex"} rounded={"md"} alignItems={"end"} bg={"linear-gradient(180deg, rgba(254,254,254,0.0544712885154062) 55%, rgba(0,0,0,0.5175245098039216) 55%)"} w={"full"} top={"0"} left={"0"} height={"full"} zIndex={"2"}>
+        <Image src={`https://api.cake-bumer.uz/storage/${item.image}`} backdropBrightness={"50"} alt="1" w={"full"} minH={"160px"} maxH={"160px"} bg={"white"} objectFit={"cover"} rounded={"sm"} />
+        <Box position={"absolute"} display={"flex"} rounded={"sm"} alignItems={"end"} bg={"linear-gradient(180deg, rgba(254,254,254,0.0544712885154062) 53%, rgba(0,0,0,0.5175245098039216) 53%)"} w={"full"} top={"0"} left={"0"} height={"full"} zIndex={"2"}>
           <Flex p={"10px"} minH={"40%"} w={"full"} alignItems={"end"} justifyContent={"start"} gap={"10px"}>
             <Box w={"full"}>
-              <Text onClick={() => dispatch(productDetailsShow(item))} cursor={"pointer"} pt={"20px"} fontSize={"22px"} fontWeight={"600"} color={"white"}>{state.lang? item.name_ru.length>16? `${item.name_ru.slice(0,15)}... ` : item.name_ru : item.name_eng.length>16? `${item.name_eng.slice(0,15)}... ` : item.name_eng}</Text>
+              <Text onClick={() => dispatch(productDetailsShow(item))} cursor={"pointer"} pt={"20px"} fontSize={"20px"} fontWeight={"500"} color={"white"}>{state.lang? item.name_ru.length>16? `${item.name_ru.slice(0,15)}... ` : item.name_ru : item.name_eng.length>16? `${item.name_eng.slice(0,15)}... ` : item.name_eng}</Text>
               <Flex justifyContent={"space-between"} alignItems={"end"} gap={"5px"} w={"full"} minH={"30px"}>
                 <Flex justifyContent={"center"} alignItems={"center"} gap={"5px"}>
                   <Text fontSize={"18px"} fontWeight={"400"} color={"whiteAlpha.900"}>{state.lang? "цена:" : "price:"}</Text>
-                  <Text fontSize={"20px"} fontWeight={"600"} color={"white"}>{Number(item.price)?.toLocaleString()}</Text>
+                  <Text fontSize={"18px"} fontWeight={"400"} color={"white"} bg={"red.500"} px={"5px"} rounded={"sm"}>{Number(item.price)?.toLocaleString()}</Text>
                 </Flex>
                 <Box>
                   <Button colorScheme="white" onClick={() => Add(item)} p={"0"} display={add ? "none" : "flex"}  rounded={"full"} variant={"outline"} color={"white"} fontSize={"18px"} maxH={"32px"} border={"2px"} maxW={"32px"} size={"sm"}>

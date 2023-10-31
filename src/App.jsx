@@ -22,7 +22,7 @@ const App = () => {
         <Route path='/' 
         element=
         {
-          <Box bg={useColorModeValue("gray.100", "gray.800")}>
+          <Box>
             <Layout />
           </Box>
         } >

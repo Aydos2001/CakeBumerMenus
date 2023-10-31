@@ -32,7 +32,7 @@ const Home = () => {
           <Text>Loading...</Text>
         </Flex>
         :
-        <Flex w={"full"} border={"1px"} rounded={"md"} borderColor={borderColor} p={"5px"} h={"full"} gap={"5px"}>
+        <Flex w={"full"}  h={"full"}>
           <Categories />
           <Products />
         </Flex>}

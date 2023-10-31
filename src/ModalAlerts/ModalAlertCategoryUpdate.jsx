@@ -56,7 +56,7 @@ function ModalAlertCategory({ id, onOpen, isOpen, onClose }) {
 
     const handleInputChange = (e) => {
         const { name, value, files } = e.target;
-        console.log(files)
+        
         // Fayl yuklandi bo'lsa, files[0] orqali fayl o'zgarishini o'rnating
         if (name === 'image_name' && files.length > 0) {
             setCategoriesData({
@@ -89,13 +89,13 @@ function ModalAlertCategory({ id, onOpen, isOpen, onClose }) {
 
             // API ga o'zgartirishlar yuboriladi (PUT so'rovi)
             const formData = new FormData();
-            
+
             formData.append('name_ru', categoriesData.name_ru);
             formData.append('name_eng', categoriesData.name_eng);
             formData.append('image_name', categoriesData.image_name);
             formData.append("_method", "PUT")
 
-            
+
 
             // Agar ma'lumotlarni yangilab bo'lsa, "PUT" so'rovi yuboriladi
             if (id) {
@@ -103,10 +103,10 @@ function ModalAlertCategory({ id, onOpen, isOpen, onClose }) {
                     method: 'POST',
                     body: formData,
                     headers: {
-                      Authorization: `Bearer ${token}`, // Tokenni so'rov sarlavhasiga qo'shamiz
+                        Authorization: `Bearer ${token}`, // Tokenni so'rov sarlavhasiga qo'shamiz
                     },
-                  });
-                  console.log(response)
+                });
+
             } else {
                 setError('Kategoriya tanlanmagan.');
             }
