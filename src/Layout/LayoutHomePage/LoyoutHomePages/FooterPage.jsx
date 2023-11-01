@@ -10,9 +10,9 @@ import { Link } from "react-router-dom";
 const FooterPage = () => {
   return (
     <Box  bg={"blackAlpha.900"} color={"white"} px={"20px"} py={{base : "20px", md : "40px"}}>
-      <Flex justifyContent={"space-around"} alignItems={"center"} gap={"20px"} flexDir={{base : "column", md : "row"}}>
+      <Flex justifyContent={"space-between"} w={"90%"} mx={"auto"} alignItems={{base : "center" , md : "start"}} gap={"20px"} flexDir={{base : "column", md : "row"}}>
         <Flex alignItems={{base : "center", md : "start"}} flexDir={"column"} textAlign={{base : "center", md : "start"}}>
-          <Text fontSize={{base : "25px", md : "30px"}} fontWeight={"semibold"}>CAKE BUMER</Text>
+          <Text fontSize={{base : "22px", md : "25px"}} fontWeight={"500"}>CAKE BUMER</Text>
           <Flex justifyContent={"center"} gap={"10px"}>
             <Link to={"/"}><Button variant={"link"} color={"gray.300"} fontWeight={"400"}>Home</Button></Link>
             <Link to={"/menu"}><Button variant={"link"} color={"gray.300"} fontWeight={"400"}>Menu</Button></Link>
