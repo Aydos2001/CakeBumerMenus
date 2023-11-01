@@ -48,7 +48,7 @@ const ProductItem = ({ item }) => {
         <Box position={"absolute"} display={"flex"} rounded={"sm"} alignItems={"end"} w={"full"} top={"0"} left={"0"} height={"full"} zIndex={"2"}>
           <Flex p={"10px"} w={"full"} alignItems={"start"} justifyContent={"start"} gap={"10px"}>
             <Flex w={"full"} flexDir={"column"} justifyContent={"end"} minH={"160px"} gap={"5px"}>
-              <Text onClick={() => dispatch(productDetailsShow(item))} cursor={"pointer"} pt={"20px"} fontSize={"20px"} fontWeight={"600"} color={"white"}>{state.lang ? item.name_ru.length > 16 ? `${item.name_ru.slice(0, 15)}... ` : item.name_ru : item.name_eng.length > 16 ? `${item.name_eng.slice(0, 15)}... ` : item.name_eng}</Text>
+              <Text onClick={() => dispatch(productDetailsShow(item))} cursor={"pointer"} pt={"20px"} fontSize={"20px"} fontWeight={"600"} color={"white"} textShadow={"1px 1px 2px rgba(0,0,0,0.7)"}>{state.lang ? item.name_ru.length > 16 ? `${item.name_ru.slice(0, 15)}... ` : item.name_ru : item.name_eng.length > 16 ? `${item.name_eng.slice(0, 15)}... ` : item.name_eng}</Text>
               <Flex justifyContent={"space-between"} alignItems={"end"} gap={"5px"} w={"full"} minH={"30px"}>
                 <Flex justifyContent={"start"} alignItems={"center"} gap={"5px"}>
                   <Text fontSize={"18px"} fontWeight={"400"} color={"whiteAlpha.900"}>{state.lang ? "цена:" : "price:"}</Text>
