@@ -11,7 +11,7 @@ const CategoryItem = ({item}) => {
   const active = state.selectCategory? state.selectCategory.category_id? false : state.selectCategory?.id === item.id? true : false  : state.categories[0].lists.length>0? state.categories[0]?.lists[0]?.id === item.id? true : false : state.categories[0].id === item.id? true : false
   
   return (
-    <Box bg={active? "red.600" : "transparent"} fontFamily={"montserrat"} onClick={() => (dispatch(selectCategory(item)), dispatch(productDetailsShow("")))} scrollSnapAlign={"start"} cursor={'pointer'}  transition={"ease-in-out .1s"}  _active={{transform : "scale(0.95)"}} minW={"full"} p={"1px"} pl={"10px"} pr={"20px"}>
+    <Box bg={active? "red.600" : "transparent"} fontFamily={"montserrat"} onClick={() => (dispatch(selectCategory(item)), dispatch(productDetailsShow("")))} scrollSnapAlign={"start"} cursor={'pointer'}   _active={{transform : "scale(0.95)"}} minW={"full"} p={"1px"} pl={"10px"} pr={"20px"}>
       <Flex justifyContent={"start"} alignItems={"center"} minH={"30px"} minW={"full"} gap={"2px"}>
         <Image maxH={"35px"} minH={"35px"} maxW={"45px"} minW={"45px"} p={"2px"} rounded={"sm"} src={`https://api.cake-bumer.uz/storage/${item.image_name}`} objectFit={"contain"} filter={"invert(100%)"}/>
         <Text fontWeight={"500"} minW={"max-content"} color={"white"}>{state.lang? item.name_ru.length>8? `${item.name_ru.slice(0,7)}... ` : item.name_ru : item.name_eng.length>8? `${item.name_eng.slice(0,7)}... ` : item.name_eng}</Text>

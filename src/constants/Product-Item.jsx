@@ -45,7 +45,7 @@ const ProductItem = ({ item }) => {
       <CardBody p={"0px"} >
 
         <Image src={`https://api.cake-bumer.uz/storage/${item.image}`} backdropBrightness={"50"} alt="1" w={"full"} minH={"165px"} maxH={"165px"} bg={"white"} objectFit={"cover"} rounded={"sm"} />
-        <Box position={"absolute"} display={"flex"} rounded={"sm"} alignItems={"end"} bg={"linear-gradient(180deg, rgba(254,254,254,0.0544712885154062) 52%, rgba(0,0,0,0.5175245098039216) 52%)"} w={"full"} top={"0"} left={"0"} height={"full"} zIndex={"2"}>
+        <Box position={"absolute"} display={"flex"} rounded={"sm"} alignItems={"end"} w={"full"} top={"0"} left={"0"} height={"full"} zIndex={"2"}>
           <Flex p={"10px"} w={"full"} alignItems={"start"} justifyContent={"start"} gap={"10px"}>
             <Flex w={"full"} flexDir={"column"} justifyContent={"end"} minH={"160px"} gap={"5px"}>
               <Text onClick={() => dispatch(productDetailsShow(item))} cursor={"pointer"} pt={"20px"} fontSize={"20px"} fontWeight={"600"} color={"white"}>{state.lang ? item.name_ru.length > 16 ? `${item.name_ru.slice(0, 15)}... ` : item.name_ru : item.name_eng.length > 16 ? `${item.name_eng.slice(0, 15)}... ` : item.name_eng}</Text>
