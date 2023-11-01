@@ -34,13 +34,13 @@ const Header = () => {
                         <Button variant={"unstyled"} fontSize={"15px"} fontWeight={"500"} color={pathname === "/" ? "red.600" : "gray.700"}>Home</Button>
                     </Link>
                     <Link to={"/menu"}>
-                        <Button variant={"unstyled"} fontSize={"15px"} fontWeight={"500"} color={pathname === "/menu" ? "red.600" : "gray.700"}>Menu</Button>
+                        <Button  fontSize={"15px"} fontWeight={"500"} color={"white"} colorScheme="red" size={"sm"} rounded={"sm"}>Menu</Button>
                     </Link>
                 </Flex>
-                <Button onClick={() => dispatch(setLangSite())} color={"white"} size={"sm"} rounded={"full"} colorScheme="red" fontSize={"12px"} minH={"40px"} maxH={"40px"} minW={"40px"} p={"10px"} fontWeight={"600"}>
+                <Button onClick={() => dispatch(setLangSite())} color={"red"} variant={"outline"} size={"sm"} rounded={"full"} colorScheme="red" fontSize={"12px"} minH={"40px"} maxH={"40px"} minW={"40px"} p={"10px"} fontWeight={"600"}>
                     <Text fontSize={"12px"} fontWeight={"semibold"}>{state.lang ? "RU" : "EN"}</Text>
                 </Button>
-                <Button onClick={() => dispatch(sidebarToggle())} color={"white"} size={"sm"} rounded={"full"} colorScheme="red" fontSize={"20px"} minH={"40px"} maxH={"40px"} minW={"40px"} p={"10px"} fontWeight={"600"}>
+                <Button onClick={() => dispatch(sidebarToggle())} color={"red"} variant={"outline"} size={"sm"} rounded={"full"} colorScheme="red"  fontSize={"20px"} minH={"40px"} maxH={"40px"} minW={"40px"} p={"10px"} fontWeight={"600"}>
                     <Icon as={state.sidebarMenues ? IoMdClose : AiOutlineBars} />
                 </Button>
             </Flex>

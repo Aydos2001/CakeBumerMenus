@@ -1,8 +1,16 @@
+import { Box } from '@chakra-ui/react'
 import React from 'react'
+import HomePage from './LoyoutHomePages/HomePage'
+import AboutPage from './LoyoutHomePages/AboutPage'
+import FooterPage from './LoyoutHomePages/FooterPage'
 
 const LayoutHomePage = () => {
   return (
-    <div>LayoutHomePage</div>
+    <Box overflowY={"auto"}>
+      <HomePage/>
+      <AboutPage/>
+      <FooterPage/>
+    </Box>
   )
 }
 

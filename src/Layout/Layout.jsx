@@ -9,7 +9,7 @@ import { Outlet } from 'react-router-dom'
 const Layout = () => {
     
   return (
-    <Box height={"100vh"} overflow={"hidden"} fontFamily={"montserrat"} backgroundImage={bgImage} backgroundSize={"400px"}>
+    <Box height={"100vh"} overflowY={"auto"} fontFamily={"montserrat"} backgroundImage={bgImage} backgroundSize={"400px"}>
         <Header/>
         <Outlet/>
         <Sidebar/>
