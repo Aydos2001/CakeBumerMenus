@@ -13,7 +13,7 @@ const HomePage = () => {
     }, []);
 
     return (
-        <Box position={"relative"} backgroundPosition={"left"} backgroundSize={"cover"} backgroundRepeat={"no-repeat"}>
+        <Box position={"relative"} bg={"black"} backgroundPosition={"left"} backgroundSize={"cover"} backgroundRepeat={"no-repeat"}>
             <Flex position={"absolute"} w={"full"} bottom={"0"} top={"0"} bg={"rgba(0,0,0,0.5)"} justifyContent={"center"} align={"center"}>
                 <Box display={"flex"} justifyContent={"center"} alignItems={"center"} flexDir={"column"}>
                     <Image src={iconImage} maxH={"200px"} maxW={"60%"} />
