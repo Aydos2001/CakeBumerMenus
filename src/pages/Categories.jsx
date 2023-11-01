@@ -11,7 +11,7 @@ const Categories = () => {
   const { state, dispatch } = useContext(MainContext)
   
   return (
-    <Box overflowY={"auto"} minW={"max-content"} pb={"5px"} pt={"15px"} bg={"red.500"}>
+    <Box overflowY={"auto"}  minW={"max-content"} pb={"5px"} pt={"15px"} bg={"red.500"}>
       <Flex alignItems={"start"} gap={"10px"} overflowY={"auto"} scrollSnapType={"y"} flexDir={"column"}>
         {state.categories.map(item => (
           item.lists.length > 0 ? <AccordionCategory item={item} key={item.id} /> : <CategoryItem item={item} key={item.id} />
