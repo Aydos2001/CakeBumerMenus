@@ -24,10 +24,10 @@ const AccordionCategory = ({ item }) => {
                     <AccordionIcon position={"absolute"} right={"2px"} color={"white"} />
                 </AccordionButton>
 
-                <AccordionPanel p={"2px"} mt={"2px"} rounded={"sm"} pt={"3px"} display={"flex"} justifyContent={"space-evenly"} gap={"3px"} alignItems={"start"} flexDir={"column"} bg={active ? "red.600" : "transparent"}>
+                <AccordionPanel p={"2px"} mt={"2px"} rounded={"sm"} pt={"3px"} display={"flex"} justifyContent={"space-evenly"} gap={"3px"} alignItems={"start"} flexDir={"column"} bg={active ? "red.600" : "blackAlpha.200"}>
                     {item.lists.map(item_list => (
-                        <Box onClick={() => (dispatch(selectCategory(item_list)), dispatch(productDetailsShow("")))} key={item_list.id} color={"white"} _active={{ transform: "scale(0.95)" }} scrollSnapAlign={"start"} cursor={'pointer'} transition={"ease-in-out .1s"} rounded={"sm"} minW={"full"} p={"1px"} pl={"14px"} pr={"9px"}>
-                            <Flex justifyContent={"start"} alignItems={"center"} minH={"30px"} minW={"full"} gap={"6px"}>
+                        <Box onClick={() => (dispatch(selectCategory(item_list)), dispatch(productDetailsShow("")))} key={item_list.id} color={"white"} _active={{ transform: "scale(0.95)" }} scrollSnapAlign={"start"} cursor={'pointer'} transition={"ease-in-out .1s"}  minW={"full"} p={"1px"} ml={"20px"} pr={"9px"}>
+                            <Flex justifyContent={"start"} alignItems={"center"} minH={"30px"} minW={"full"} gap={"1px"}>
                                 <Image maxH={"30px"} minH={"30px"} maxW={"40px"} minW={"40px"} p={"2px"} rounded={"sm"} src={`https://api.cake-bumer.uz/storage/${item_list.image_name}`} objectFit={"contain"} filter={"invert(100%)"} />
                                 <Text fontWeight={"500"} minW={"max-content"} fontSize={"sm"}>{state.lang ? item_list.name_ru.length > 10 ? `${item_list.name_ru.slice(0, 9)}... ` : item_list.name_ru : item_list.name_eng.length > 10 ? `${item_list.name_eng.slice(0, 9)}... ` : item_list.name_eng}</Text>
                             </Flex>
