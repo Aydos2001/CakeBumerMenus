@@ -57,9 +57,9 @@ const LayoutAdmin = () => {
 
     if (loggedIn) {
         return (
-            <Flex p="0px" h="100vh" position="relative">
+            <Flex p="0px" minH="100vh" position="relative">
                 <AdminSidebar />
-                <Box display="flex" flexDirection="column" gap="5px" h="100vh" w="full" position={{ base: 'absolute', sm: 'unset' }} p={{ base: '2px', sm: '5px' }}>
+                <Box display="flex" flexDirection="column" gap="5px" h="100vh" w="full" position={{ base: 'absolute', md: "relative" }} maxW={{base : "full" , md : "75%" , lg : "80%"}} p={{ base: '2px', sm: '5px' }}>
                     <Box display={{ base: state.openSidebar ? 'none' : 'block', md: 'none' }} position="absolute" left="0" top="0" w="full" h="100vh" zIndex={1} bg="blackAlpha.700"></Box>
                     <AdminHeader handleLogout={handleLogout}/>
                     <Box h="full" p="10px 10px" rounded={{ base: '0', sm: 'sm' }} border="1px" borderColor={ContentBorder} overflowY="auto">

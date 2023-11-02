@@ -16,7 +16,7 @@ const Sidebar = () => {
     const {state, dispatch} = useContext(MainContext)
 
   return (
-    <Box w={{base: "80%", md: "280px", lg: "300px"}} borderRight={"1px"} borderRightColor={sideBorder} zIndex={"2"} bg={sideBg} p={"10px"} h={"100%"} minW={"190px"} position={{base: "absolute", md: "sticky"}} left={state.openSidebar? "-80vw": "0"} transition={"ease .5s"}>
+    <Box w={{base: "80%", md : "25%", lg : "20%",}} borderRight={"1px"} borderRightColor={sideBorder} zIndex={"2"} bg={sideBg} p={"10px"} h={"100vh"}  position={{base: "absolute", md: "sticky"}} left={state.openSidebar? "-80vw": "0"} transition={"ease .5s"}>
         
         <Heading color={sideHeading} fontSize={{base: "20px", sm: "22px", md: "25px"}} textAlign={"center"} my={"15px"}>Dashboard</Heading>
         <Divider h={"1.2px"} border={"none"} bg={sideBorder} mb={"20px"}/>
