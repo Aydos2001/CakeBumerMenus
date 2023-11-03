@@ -24,7 +24,7 @@ const Header = () => {
         }
     }, [colorMode])
     return (
-        <Box w={"full"} px={"5%"} shadow={"md"} fontFamily={"montserrat"} zIndex={2} bg={"white"} minH={"65px"} maxH={"65px"} position={"sticky"} top={"0"} left={"0"} borderBottom={"1px"} borderColor={"blackAlpha.200"} display={"flex"} justifyContent={"space-between"} alignItems={"center"}>
+        <Box w={"full"} px={"5%"} shadow={"md"} fontFamily={"montserrat"} zIndex={2} bg={"white"} minH={"65px"} maxH={"65px"} position={"sticky"} top={"-2px"} left={"0"} borderBottom={"1px"} borderColor={"blackAlpha.200"} display={"flex"} justifyContent={"space-between"} alignItems={"center"}>
             <Box>
                 <Image src={icon_image} maxW={"100px"} maxH={"40"} />
             </Box>
