@@ -16,6 +16,7 @@ const ProductDetails = ({state, dispatch}) => {
         <Flex justifyContent={"center"} alignItems={"end"} gap={"10px"}>
           <Text fontSize={"20px"} fontWeight={"500"}>{state.lang? "цена:" : "price:"}</Text>
           <Text fontSize={"22px"} fontWeight={"semibold"}>{Number(state.productDetails?.price)?.toLocaleString()}</Text>
+          <Text fontSize={"20px"} fontWeight={"500"}>{state.lang? "сум" : "swm"}</Text>
         </Flex>
         <Image src={state.productDetails ? `https://api.cake-bumer.uz/storage/${state.productDetails?.image}` : ""} border={"1px"} borderColor={"red.300"} p={"5px"} w={"full"} maxH={{ base: "250px", md: "300px", lg: "350px" }} objectFit={"cover"} rounded={"sm"} />
         <Text fontSize={"18px"} fontWeight={"500"}>{state.lang ? state.productDetails?.description_ru : state.productDetails?.description_eng}</Text>
